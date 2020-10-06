@@ -1,8 +1,7 @@
 #!/bin/bash
 
-echo "emter the values of a, b, c"
-read a
-read b
-read c
-
-
+	for ((i=0; i<${#dictionary[$key]}; i++))
+	do
+		array[((i))]=${dictionary[$key]}
+	done
+echo "${array[i]}"
