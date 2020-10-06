@@ -5,7 +5,7 @@
    do
       for((j=0; j<i-1; j++))
       do
-         if [ ${array[j]} -gt ${array[$((j+1))]} ]
+         if [ ${array[j]} -lt ${array[$((j+1))]} ]
          then
             temp=${array[$j]}
             array[j]=${array[$((j+1))]}
