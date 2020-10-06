@@ -1,7 +1,9 @@
 #!/bin/bash
 
-	for ((i=0; i<${#dictionary[$key]}; i++))
-	do
-		array[((i))]=${dictionary[$key]}
-	done
-echo "${array[i]}"
+
+for((key=0; key<=${#dic[@]}; key++))
+do
+arr[key]=${dic[key]}
+done
+echo "${arr[@]}"
+
