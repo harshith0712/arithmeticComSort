@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo "emter the values of a, b, c"
-read a
-read b
-read c
 
+uc2=$(($a*$b+$c))
 
+echo $uc2
