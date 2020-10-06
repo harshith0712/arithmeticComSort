@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "emter the values of a, b, c"
-read a
-read b
-read c
+## usecase1
 
+uc1=$(($a+$b*$c))
+
+echo $uc1
 
