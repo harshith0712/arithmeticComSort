@@ -18,3 +18,7 @@ echo $uc2
 uc3=$(($c+$a/$b))
 
 echo $uc3
+
+uc4=$(($a%$b+$c))
+
+echo $uc4
