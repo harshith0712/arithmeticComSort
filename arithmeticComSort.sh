@@ -3,7 +3,7 @@
 
 for((key=0; key<=${#dic[@]}; key++))
 do
-arr[key]=${dic[key]}
+array[key]=${dic[key]}
 done
-echo "${arr[@]}"
+echo "${array[@]}"
 
