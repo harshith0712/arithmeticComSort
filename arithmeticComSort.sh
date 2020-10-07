@@ -3,14 +3,14 @@
 
 	for((i=0; i<4; i++))
    do
-      for((j=0; j<i-1; j++))
+      for((j=0; j<4; j++))
       do
          if [ ${array[j]} -lt ${array[$((j+1))]} ]
          then
-            temp=${array[$j]}
+            temp=${array[j]}
             array[j]=${array[$((j+1))]}
             array[$((j+1))]=$temp
          fi
       done
    done
-echo "${array[@]}"
+echo "the values of array are sorted in acending order ${array[@]}"
