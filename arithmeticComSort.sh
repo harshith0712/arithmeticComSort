@@ -30,49 +30,49 @@ uc4=$(($a%$b+$c))
 echo $uc4
 
 ## useCase5
+declare -A dictionary
 
-key=0
-dictionary[key++]=$uc1
-dictionary[key++]=$uc2
-dictionary[key++]=$uc3
-dictionary[key++]=$uc4
-
+dictionary[1]=$uc1
+dictionary[2]=$uc2
+dictionary[3]=$uc3
+dictionary[4]=$uc4
+echo "the values are stored in dictionary ${dictionary[@]}"
 ## useCase6
-
-for((key=0; key<=${#dic[@]}; key++))
+key=0
+for((i=0; i<=${#dictionary[@]}; i++))
 do
-array[key]=${dic[key]}
+array[i]=${dictionary[$key]}
+((key++))
 done
-echo "${array[@]}"
+echo "the values stored in array are ${array[@]}"
 
 ## sort in ascending order
 	for((i=0; i<4; i++))
    do
-      for((j=0; j<i-1; j++))
+      for((j=0; j<4; j++))
       do
-         if [ ${array[j]} -gt ${array[$((j+1))]} ]
+         if [ ${array[j]} -lt ${array[$((j+1))]} ]
          then
-            temp=${array[$j]}
+            temp=${array[j]}
             array[j]=${array[$((j+1))]}
             array[$((j+1))]=$temp
          fi
       done
    done
-echo "${array[@]}"
+echo "the values of array are sorted in decending order ${array[@]}"
 
 ## sort in decending order
 
 for((i=0; i<4; i++))
    do
-      for((j=0; j<i-1; j++))
+      for((j=0; j<4; j++))
       do
          if [ ${array[j]} -gt ${array[$((j+1))]} ]
          then
-            temp=${array[$j]}
+            temp=${array[j]}
             array[j]=${array[$((j+1))]}
             array[$((j+1))]=$temp
          fi
       done
    done
-echo "${array[@]}"
-
+echo "the values of array are sorted in acending order ${array[@]}"
