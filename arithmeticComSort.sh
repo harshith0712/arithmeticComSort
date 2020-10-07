@@ -1,9 +1,10 @@
 #!/bin/bash
 
-
-for((key=0; key<=${#dic[@]}; key++))
+key=0
+for((i=0; i<=${#dictionary[@]}; i++))
 do
-array[key]=${dic[key]}
+array[i]=${dictionary[$key]}
+((key++))
 done
-echo "${array[@]}"
+echo "the values are stored in array ${array[@]}"
 
